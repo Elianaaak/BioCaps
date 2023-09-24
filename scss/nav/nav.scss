@@ -1,0 +1,21 @@
+.nav-logo {
+  height: auto;
+  width: 8.5rem;
+}
+.navbar-nav {
+  li {
+    a {
+      font-family: $font-secondary;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.nav-cart {
+  height: auto;
+  width: 2.3rem;
+}
+
+.nav-custom {
+  background-color: #ffffff;
+}
