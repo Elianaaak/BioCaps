@@ -3,7 +3,7 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #709646 #ffffff;
+  scrollbar-color: #4b6826 #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
@@ -16,7 +16,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #709646;
+  background-color: #4b6826;
   border-radius: 16px;
   border: 3px none #ffffff;
 }
@@ -111,6 +111,8 @@ button:hover .button-text {
   color: #fff;
 }
 
+/* Fuentes */
+
 h1,
 h2,
 h3,
@@ -127,3 +129,9 @@ p {
   color: $black;
   font-size: 1.1rem;
 }
+
+/* Scroll snapping */
+
+ html {
+  scroll-snap-type: y proximity;
+ }

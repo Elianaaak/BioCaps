@@ -3,3 +3,14 @@
   background-color: $color-primary;
   background-size: cover;
 }
+
+.pre-navbar {
+  background-color: $color-secondary;
+  p {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  img {
+    height: 1.3rem;
+  }
+}

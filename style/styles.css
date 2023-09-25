@@ -3,7 +3,7 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #709646 #ffffff; }
+  scrollbar-color: #4b6826 #ffffff; }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -13,7 +13,7 @@
   background: #ffffff; }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #709646;
+  background-color: #4b6826;
   border-radius: 16px;
   border: 3px none #ffffff; }
 
@@ -96,6 +96,7 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
   color: #fff; }
 
+/* Fuentes */
 h1,
 h2,
 h3,
@@ -110,6 +111,10 @@ p {
   font-family: "Poppins", sans-serif;
   color: #494949;
   font-size: 1.1rem; }
+
+/* Scroll snapping */
+html {
+  scroll-snap-type: y proximity; }
 
 .nav-logo {
   height: auto;
@@ -131,10 +136,23 @@ p {
   background-color: #DEE5DA;
   background-size: cover; }
 
+.pre-navbar {
+  background-color: #709646; }
+  .pre-navbar p {
+    color: #ffffff;
+    font-weight: bold; }
+  .pre-navbar img {
+    height: 1.3rem; }
+
 .beneficios img {
   height: 7rem;
   width: auto; }
 
+/* .beneficios-desc {
+  color: #4b6826;
+  font-weight: bold;
+  font-size: 1.2rem;
+}*/
 .cta {
   border: none;
   background: none; }
@@ -178,6 +196,36 @@ p {
   transform-origin: bottom left; }
 
 .products-carousel {
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
   border-color: #709646; }
+
+.howto {
+  background-color: #DEE5DA;
+  position: relative;
+  z-index: 2000;
+  scroll-snap-align: start;
+  scroll-snap-stop: always; }
+
+.howto-2 {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2000;
+  scroll-snap-align: start;
+  scroll-snap-stop: always; }
+
+.use-step {
+  background-color: #709646;
+  border-radius: 50%;
+  height: 4.5rem;
+  width: 4.5rem; }
+  .use-step p {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold; }
+
+.use-1 {
+  height: 100vh; }
+
+.contact {
+  scroll-snap-align: start; }
