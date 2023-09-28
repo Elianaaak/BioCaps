@@ -1,7 +1,9 @@
 .home {
   height: 80vh;
-  background-color: $color-primary;
+  background-image: url(../img/background-home.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px);
 }
 
 .pre-navbar {

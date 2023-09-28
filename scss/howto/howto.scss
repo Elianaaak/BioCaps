@@ -1,17 +1,17 @@
 .howto {
     background-color: $color-primary;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 2000;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 .howto-2 {
     background-color: $white;
-    position: relative;
-    z-index: 2000;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    z-index: 2001;
+}
+
+.howto-3 {
+  z-index: 2002;
 }
 
 

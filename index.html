@@ -17,6 +17,7 @@
     <div class="page-loader"></div>
     <div
       class="row px-4 py-2 d-flex align-items-center justify-content-between pre-navbar"
+      id="home"
     >
       <div class="col-6">
         <p class="mb-0">Envío a todas partes del país</p>
@@ -30,7 +31,7 @@
     </div>
     <nav class="navbar sticky-top navbar-expand-lg nav-custom">
       <div class="container-fluid">
-        <img src="./img/logo.png" alt="BioCaps" class="nav-logo" />
+        <a href="#home"><img src="./img/logo.png" alt="BioCaps" class="nav-logo" /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,16 +49,16 @@
         >
           <ul class="navbar-nav ms-5">
             <li class="nav-item ms-5 me-2">
-              <a class="nav-link" aria-current="page" href="#">Beneficios</a>
+              <a class="nav-link" aria-current="page" href="#beneficios">Beneficios</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Productos</a>
+              <a class="nav-link" href="#productos">Productos</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Cómo usar</a>
+              <a class="nav-link" href="#uso">Uso</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="#contacto">Contacto</a>
             </li>
           </ul>
           <img src="./img/cart.svg" alt="Tienda" class="nav-cart" />
@@ -73,13 +74,13 @@
             <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
             </span>
-            <span class="button-text">Shop now</span>
+            <span class="button-text">comprar</span>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="beneficios">
       <div
         class="row d-flex justify-content-between beneficios py-5 align-items-center"
       >
@@ -132,9 +133,10 @@
         </div>
         <div
           class="col-1 d-flex flex-column justify-content-center align-items-center"
+          
         >
           <img src="./img/beneficios-icon8.svg" alt="0 residuos" />
-          <p class="text-center">
+          <p class="text-center" id="productos">
             <span class="beneficios-desc">A</span>daptabilidad
           </p>
         </div>
@@ -149,7 +151,7 @@
           <div class="col-7">
             <div
               id="carouselExampleCaptions"
-              class="carousel carousel-dark slide products-carousel p-1 mb-4"
+              class="carousel carousel-dark slide products-carousel p-1 mb-5"
               data-bs-ride="carousel"
             >
               <div class="carousel-inner">
@@ -237,89 +239,195 @@
         </div>
       </div>
     </div>
-    <div class="howto" id="scroll-behavior">
-      <div class="container">
-        <div class="row use-1">
-          <div class="col-2 d-flex align-items-center justify-content-center">
-            <div
-              class="use-step d-flex justify-content-center align-items-center"
-            >
-              <p class="mb-0">1</p>
+    <div>
+      <div class="howto" id="uso">
+        <div class="container">
+          <div class="row use-1">
+            <div class="col-2 d-flex align-items-center justify-content-center">
+              <div
+                class="use-step d-flex justify-content-center align-items-center"
+              >
+                <p class="mb-0">1</p>
+              </div>
+            </div>
+            <div class="col-10 d-flex justify-content-center flex-column">
+              <div class="row">
+                <div class="col-12">
+                  <h4>Introducir</h4>
+                </div>
+                <div class="col-12"></div>
+                <div class="col-12">
+                  <p>
+                    Introducir una BioCap® en el recipiente desde el cual se
+                    quiera utilizar el producto (pulverizador, balde,
+                    lavarropas, etc.).
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-10 d-flex justify-content-center flex-column">
-            <div class="row">
-              <div class="col-12">
-                <h4>Introducir</h4>
+        </div>
+      </div>
+      <div class="howto howto-2">
+        <div class="container">
+          <div class="row use-1">
+            <div class="col-2 d-flex align-items-center justify-content-center">
+              <div
+                class="use-step d-flex justify-content-center align-items-center"
+              >
+                <p class="mb-0">2</p>
               </div>
-              <div class="col-12"></div>
-              <div class="col-12">
-                <p>
-                  Introducir una BioCap® en el recipiente desde el cual se
-                  quiera utilizar el producto (pulverizador, balde, lavarropas,
-                  etc.).
-                </p>
+            </div>
+            <div class="col-10 d-flex justify-content-center flex-column">
+              <div class="row">
+                <div class="col-12">
+                  <h4>Esperar</h4>
+                </div>
+                <div class="col-12"></div>
+                <div class="col-12">
+                  <p>
+                    Esperar 2 minutos, el agua romperá la bolsa y entrará en
+                    contacto con el agua
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="howto howto-3">
+        <div class="container">
+          <div class="row use-1">
+            <div class="col-2 d-flex align-items-center justify-content-center">
+              <div
+                class="use-step d-flex justify-content-center align-items-center"
+              >
+                <p class="mb-0">3</p>
+              </div>
+            </div>
+            <div class="col-10 d-flex justify-content-center flex-column">
+              <div class="row">
+                <div class="col-12">
+                  <h4>Agitar</h4>
+                </div>
+                <div class="col-12"></div>
+                <div class="col-12">
+                  <p>
+                    Agitar hasta su homogenización y nada más, ¡ya está listo
+                    para ser utilizado!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="howto-2">
+    <div class="contact py-5" id="contacto">
       <div class="container">
-        <div class="row use-1">
-          <div class="col-2 d-flex align-items-center justify-content-center">
-            <div
-              class="use-step d-flex justify-content-center align-items-center"
-            >
-              <p class="mb-0">2</p>
-            </div>
+        <div class="row">
+          <div class="col-12">
+            <h3 class="text-center"></h3>
           </div>
-          <div class="col-10 d-flex justify-content-center flex-column">
-            <div class="row">
-              <div class="col-12">
-                <h4>Esperar</h4>
-              </div>
-              <div class="col-12"></div>
-              <div class="col-12">
-                <p>
-                  Esperar 2 minutos, el agua romperá la bolsa y entrará en
-                  contacto con el agua
-                </p>
-              </div>
+          <div class="col-6 d-flex justify-content-center">
+            <form
+              action="https://formsubmit.co/your@email.com"
+              method="POST"
+              class="row d-flex justify-content-center"
+            >
+              <div class="py-2 form-custom">
+                <div class="d-flex justify-content-center col-12">
+                  <div class="wave-group my-3" style="margin-right: 30px">
+                    <input required type="text" name="name" class="input" />
+                    <span class="bar"></span>
+                    <label class="label">
+                      <span class="label-char" style="--index: 0">N</span>
+                      <span class="label-char" style="--index: 1">o</span>
+                      <span class="label-char" style="--index: 2">m</span>
+                      <span class="label-char" style="--index: 3">b</span>
+                      <span class="label-char" style="--index: 4">r</span>
+                      <span class="label-char" style="--index: 5">e</span>
+                    </label>
+                  </div>
+                  <div class="wave-group my-3">
+                    <input
+                      required
+                      type="email"
+                      name="email"
+                      class="input"
+                      
+                    />
+                    <span class="bar"></span>
+                    <label class="label">
+                      <span class="label-char" style="--index: 0">E</span>
+                      <span class="label-char" style="--index: 1">m</span>
+                      <span class="label-char" style="--index: 2">a</span>
+                      <span class="label-char" style="--index: 3">i</span>
+                      <span class="label-char" style="--index: 4">l</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 d-flex align-items-center flex-column">
+                  <div class="wave-group">
+                    <input
+                      required
+                      type="text"
+                      name="asunto"
+                      class="input"
+                      style="width: 430px"
+                    />
+                    <span class="bar bar-asunto"></span>
+                    <label class="label">
+                      <span class="label-char" style="--index: 0">A</span>
+                      <span class="label-char" style="--index: 1">s</span>
+                      <span class="label-char" style="--index: 2">u</span>
+                      <span class="label-char" style="--index: 3">n</span>
+                      <span class="label-char" style="--index: 4">t</span>
+                      <span class="label-char" style="--index: 5">o</span>
+                    </label>
+                  </div>
+                  <textarea
+                    class="contact-message my-3"
+                    type="text"
+                    name="message"
+                    required
+                    placeholder="Su mensaje"
+                    style="width: 430px; height: 200px;"
+                  ></textarea>
+                  <button class="button2" type="submit">
+                    Enviar
+                </button>
+                </div>
+              </div> 
+            </form>
+          </div>
+          <div class="col-6 py-2 d-flex justify-content-center flex-column">
+            <p>Ante cualquier consulta, no dudes en preguntar.</p>
+            <div class="d-flex contact-info">
+              <img src="./img/contact-location.svg" alt="Ubicación">
+              <div class="d-flex flex-column">
+                <p class="my-0 contact-subtitles">Dirección:</p>
+                <p>Tapalque 5130/5132</p>  
+              </div>  
             </div>
+            <div class="d-flex contact-info">
+              <img src="./img/contact-email.svg" alt="Ubicación">
+              <div class="d-flex flex-column">
+                <p class="my-0 contact-subtitles">Email:</p>
+                <p>info@biocaps.com.ar</p>  
+              </div>  
+            </div>
+            <div class="d-flex contact-info">
+              <img src="./img/contact-phone.svg" alt="Ubicación">
+              <div class="d-flex flex-column">
+                <p class="my-0 contact-subtitles">Teléfono:</p>
+                <p>+54 4232-6393</p>  
+              </div>  
+            </div>            
           </div>
         </div>
       </div>
     </div>
-    <div class="howto">
-      <div class="container">
-        <div class="row use-1">
-          <div class="col-2 d-flex align-items-center justify-content-center">
-            <div
-              class="use-step d-flex justify-content-center align-items-center"
-            >
-              <p class="mb-0">3</p>
-            </div>
-          </div>
-          <div class="col-10 d-flex justify-content-center flex-column">
-            <div class="row">
-              <div class="col-12">
-                <h4>Agitar</h4>
-              </div>
-              <div class="col-12"></div>
-              <div class="col-12">
-                <p>
-                  Agitar hasta su homogenización y nada más, ¡ya está listo para
-                  ser utilizado!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="contact" style="height: 300vh; background-color: gray"></div>
 
     <script src="./js/bootstrap.min.js"></script>
     <script src="./script/main.js"></script>
