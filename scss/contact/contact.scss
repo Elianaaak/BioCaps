@@ -1,6 +1,4 @@
-.contact {
-  height: 90vh;
-}
+
 
 .wave-group {
   position: relative;
@@ -162,4 +160,16 @@
     font-weight: bold;
   }
   
+}
+
+.contact-link {
+  text-decoration: none;
+  p{
+    padding-bottom: 0.1rem;    
+    border-bottom: 2px solid $color-secondary;
+  }
+}
+
+.contact-link-p {
+  text-decoration: none;
 }

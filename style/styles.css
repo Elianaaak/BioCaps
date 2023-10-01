@@ -121,6 +121,8 @@ html {
 .navbar-nav li a {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem; }
+  .navbar-nav li a:hover {
+    color: #4b6826; }
 
 .nav-cart {
   height: auto;
@@ -227,9 +229,6 @@ html {
 
 .use-1 {
   height: 100vh; }
-
-.contact {
-  height: 90vh; }
 
 .wave-group {
   position: relative; }
@@ -368,3 +367,12 @@ html {
 
 .contact-info .contact-subtitles {
   font-weight: bold; }
+
+.contact-link {
+  text-decoration: none; }
+  .contact-link p {
+    padding-bottom: 0.1rem;
+    border-bottom: 2px solid #709646; }
+
+.contact-link-p {
+  text-decoration: none; }

@@ -7,6 +7,9 @@
     a {
       font-family: $font-secondary;
       font-size: 1.1rem;
+      &:hover {
+        color: #4b6826;
+      }
     }
   }
 }
