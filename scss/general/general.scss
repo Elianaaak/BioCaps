@@ -137,3 +137,16 @@ p {
 html {
   scroll-behavior: smooth;
 }
+
+.pop-up {
+  z-index: 9998;
+  opacity: 80%;
+}
+
+.page-loader {
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-primary;
+  position: fixed;
+}

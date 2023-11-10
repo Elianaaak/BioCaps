@@ -1,0 +1,43 @@
+.faq-questions {
+    p {
+        
+        border-radius: 10px;
+        transition: all 0.15s ease;
+        &:hover {
+            transition: all 0.15s ease;
+            cursor:pointer;
+            background-color: $color-secondary !important;
+            color: $white !important;
+        }
+    }
+}
+
+.faq {
+    h5 {
+        font-weight: lighter;
+        font-size: 2rem;
+    }
+    h3 {
+        color: $color-secondary;
+    }
+}
+
+@keyframes selection {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.faq-answers {
+    line-height: 2.5rem;
+    .faq-answers-div {
+        transition: all 1s ease;
+        display: none;
+        opacity: 0;
+        animation: selection 0.2s linear 0.1s forwards;
+    }
+    
+}

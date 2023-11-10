@@ -1,0 +1,12 @@
+.instagram {
+    background-color: $color-secondary;
+    .slick-arrow {
+        background-color: $white;
+        svg {
+            color: $black;
+        }
+    }
+    h4{
+        color: $white;
+    }
+}

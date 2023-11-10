@@ -3,16 +3,29 @@
   background-image: url(../img/background-home.jpg);
   background-size: cover;
   background-attachment: fixed;
-  backdrop-filter: blur(10px);
+}
+
+@keyframes change-text {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .pre-navbar {
   background-color: $color-secondary;
+  overflow: hidden;
   p {
     color: #ffffff;
     font-weight: bold;
+    opacity: 0;
+    transition: all 1s ease;
+    animation: change-text 0.2s linear 0.1s forwards;
   }
   img {
     height: 1.3rem;
   }
+
 }

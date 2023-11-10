@@ -13,24 +13,77 @@
       rel="stylesheet"
     />
   </head>
-  <body class="overflow-x-hidden">
-    <div class="page-loader"></div>
+  <body class="overflow-x-hidden position-relative">
     <div
-      class="row px-4 py-2 d-flex align-items-center justify-content-between pre-navbar"
+      class="row px-4 py-2 d-flex align-items-center justify-content-center justify-content-xl-between pre-navbar"
       id="home"
     >
-      <div class="col-6">
-        <p class="mb-0">Envío a todas partes del país</p>
+      <div class="col-12 col-xl-6">
+        <p
+          class="mb-1 mb-xl-0 pre-navbar_text text-center text-xl-start"
+          id="pre-navbar_text1"
+        >
+          Envíos gratis desde $15.000
+        </p>
+        <p
+          class="mb-1 mb-xl-0 pre-navbar_text text-center text-xl-start"
+          id="pre-navbar_text2"
+        >
+          Hasta 3 cuotas sin interés
+        </p>
+        <p
+          class="mb-1 mb-xl-0 pre-navbar_text text-center text-xl-start"
+          id="pre-navbar_text3"
+        >
+          Entregas a todo el país
+        </p>
       </div>
-      <div class="col-6 d-flex justify-content-end gap-3">
+      <div
+        class="col-12 col-xl-6 d-flex justify-content-xl-end justify-content-center gap-3"
+      >
         <img src="./img/instagram.svg" alt="instagram" />
         <img src="./img/tiktok.svg" alt="tiktok" />
         <img src="./img/twitter.svg" alt="twitter" />
       </div>
     </div>
-    <nav class="navbar sticky-top navbar-expand-lg nav-custom">
+    <nav
+      class="navbar sticky-top navbar-expand-lg nav-custom d-none d-xl-block"
+    >
       <div class="container-fluid">
-        <a href="#home"><img src="./img/logo.png" alt="BioCaps" class="nav-logo" /></a>
+        <div class="row d-flex justify-content-between flex-fill">
+          <div class="collapse navbar-collapse col-4" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item ms-3 me-2">
+                <a class="nav-link" aria-current="page" href="#beneficios"
+                  >Beneficios</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#productos">Productos</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#uso">Uso</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <a href="#home"
+              ><img src="./img/logo.png" alt="BioCaps" class="nav-logo"
+            /></a>
+          </div>
+          <div class="col-4 d-flex align-items-center justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#faqs">FAQs</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+            <img src="./img/cart.svg" alt="Tienda" class="nav-cart me-3 ms-2" />
+          </div>
+        </div>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -42,38 +95,61 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse d-flex justify-content-between"
-          id="navbarNav"
+      </div>
+    </nav>
+
+    <!-- Nav para mobile  -->
+
+    <nav class="navbar navbar-expand-lg nav-custom sticky-top d-xl-none">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">
+          <img src="./img/logo.png" alt="BioCaps" class="nav-logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <ul class="navbar-nav ms-5">
-            <li class="nav-item ms-5 me-2">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#beneficios">Beneficios</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
               <a class="nav-link" href="#productos">Productos</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
               <a class="nav-link" href="#uso">Uso</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#faqs">FAQs</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contacto">Contacto</a>
             </li>
           </ul>
-          <img src="./img/cart.svg" alt="Tienda" class="nav-cart" />
+          <img src="./img/cart.svg" alt="Tienda" class="nav-cart"/>
         </div>
       </div>
     </nav>
 
     <div class="home d-flex align-items-center">
       <div class="row">
-        <div class="col-12 ps-5 ms-4">
-          <h2>La revolución de la limpieza ecológica.</h2>
+        <div
+          class="col-12 ps-xl-5 ms-xl-4 d-flex justify-content-center flex-column d-xl-block"
+        >
+          <h2>Un futuro más limpio.</h2>
           <button class="learn-more mt-4">
             <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
             </span>
-            <span class="button-text">comprar</span>
+            <span class="button-text">shop</span>
           </button>
         </div>
       </div>
@@ -84,156 +160,313 @@
         class="row d-flex justify-content-between beneficios py-5 align-items-center"
       >
         <div class="col-12 mb-5">
-          <h2 class="text-center">Limpieza MAESTRA</h2>
+          <h2 class="text-center">Pequeñas cápsulas, grandes soluciones</h2>
         </div>
         <div
-          class="col-2 d-flex flex-column justify-content-center align-items-center"
+          class="col-4 d-flex flex-column justify-content-center align-items-center"
         >
-          <img src="./img/beneficios-icon2.svg" alt="Eco-Friendly" />
-          <p class="text-center">
-            <span class="beneficios-desc">M</span>edio ambiente
-          </p>
+          <img
+            src="./img/beneficios-icon2.png"
+            alt="Eco-Friendly"
+            class="mb-2"
+          />
+          <p class="text-center">Residuo 0</p>
         </div>
         <div
-          class="col-1 me-5 d-flex flex-column justify-content-center align-items-center"
+          class="col-4 d-flex flex-column justify-content-center align-items-center"
         >
-          <img src="./img/beneficios-icon3.svg" alt="Ahorro económico" />
-          <p class="text-center"><span class="beneficios-desc">A</span>horro</p>
+          <img src="./img/secure.svg" alt="Seguro de usar" class="mb-2" />
+          <p class="text-center">Manipulación segura</p>
         </div>
         <div
-          class="col-1 d-flex flex-column justify-content-center align-items-center"
+          class="col-4 d-flex flex-column justify-content-center align-items-center"
         >
-          <img src="./img/beneficios-icon1.svg" alt="Ahorro de espacio" />
-          <p class="text-center">
-            <span class="beneficios-desc">E</span>spacio
-          </p>
-        </div>
-        <div
-          class="col-2 d-flex flex-column justify-content-center align-items-center"
-        >
-          <img src="./img/beneficios-icon5.svg" alt="Seguro de usar" />
-          <p class="text-center"><span class="beneficios-desc">S</span>eguro</p>
-        </div>
-        <div
-          class="col-1 d-flex flex-column justify-content-center align-items-center"
-        >
-          <img src="./img/beneficios-icon6.svg" alt="Fácil de transportar" />
-          <p class="text-center">
-            <span class="beneficios-desc">T</span>ransporte
-          </p>
-        </div>
-        <div
-          class="col-2 d-flex flex-column justify-content-center align-items-center"
-        >
-          <img src="./img/beneficios-icon7.svg" alt="0 residuos" />
-          <p class="text-center">
-            <span class="beneficios-desc">R</span>esiduo 0
-          </p>
-        </div>
-        <div
-          class="col-1 d-flex flex-column justify-content-center align-items-center"
-          
-        >
-          <img src="./img/beneficios-icon8.svg" alt="0 residuos" />
-          <p class="text-center" id="productos">
-            <span class="beneficios-desc">A</span>daptabilidad
-          </p>
+          <img
+            src="./img/beneficios-icon1.svg"
+            alt="Ahorro de espacio"
+            class="mb-2"
+          />
+          <p class="text-center">Espacio</p>
         </div>
       </div>
     </div>
     <div class="productos">
-      <div class="container">
-        <div class="row py-5">
-          <div class="col-5 d-flex align-items-center justify-content-center">
-            <h3 class="text-center">Nuestros Productos</h3>
-          </div>
-          <div class="col-7">
-            <div
-              id="carouselExampleCaptions"
-              class="carousel carousel-dark slide products-carousel p-1 mb-5"
-              data-bs-ride="carousel"
+      <div class="container-fluid">
+        <div class="row py-5 d-flex">
+          <div class="slick-list" id="slick-list">
+            <button
+              class="slick-arrow slick-prev"
+              id="button-prev"
+              data-button="button-prev"
+              onclick="app.processingButton(event)"
             >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="./img/products-1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <p style="font-size: 1.3rem">Antigrasa ULTRA Rápido</p>
-                    <button class="cta">
-                      <span class="hover-underline-animation"> Comprar</span>
-                      <svg
-                        viewBox="0 0 46 16"
-                        height="10"
-                        width="30"
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="arrow-horizontal"
-                      >
-                        <path
-                          transform="translate(30)"
-                          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                          data-name="Path 10"
-                          id="Path_10"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./img/products-2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <p style="font-size: 1.3rem">Limpia Pisos ULTRA Rápido</p>
-                    <button class="cta">
-                      <span class="hover-underline-animation"> Comprar</span>
-                      <svg
-                        viewBox="0 0 46 16"
-                        height="10"
-                        width="30"
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="arrow-horizontal"
-                      >
-                        <path
-                          transform="translate(30)"
-                          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                          data-name="Path 10"
-                          id="Path_10"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="chevron-left"
+                class="svg-inline--fa fa-chevron-left fa-w-10"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                ></path>
+              </svg>
+            </button>
+            <div class="slick-track" id="track">
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
                 </div>
               </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Limpia Pisos
+                    </h4>
+                    <picture>
+                      <img src="./img/products-2.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Limpia Pisos
+                    </h4>
+                    <picture>
+                      <img src="./img/products-2.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Limpia Pisos
+                    </h4>
+                    <picture>
+                      <img src="./img/products-2.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div
+                  class="position-relative d-flex justify-content-center align-items-center"
+                >
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Limpia Pisos
+                    </h4>
+                    <picture>
+                      <img src="./img/products-2.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Limpia Pisos
+                    </h4>
+                    <picture>
+                      <img src="./img/products-2.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Limpia Pisos
+                    </h4>
+                    <picture>
+                      <img src="./img/products-2.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Limpia Pisos
+                    </h4>
+                    <picture>
+                      <img src="./img/products-2.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slick">
+                <div class="position-relative">
+                  <a href="/" class="d-flex justify-content-center">
+                    <h4 class="product-title mt-1">
+                      <small>ULTRA Rapido</small>Antigrasa
+                    </h4>
+                    <picture>
+                      <img src="./img/products-1.jpg" alt="Image" />
+                    </picture>
+                    <div class="card-shop position-absolute">
+                      <img src="./img/cart-light.svg" />
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
+            <button
+              class="slick-arrow slick-next"
+              id="button-next"
+              data-button="button-next"
+              onclick="app.processingButton(event)"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="chevron-right"
+                class="svg-inline--fa fa-chevron-right fa-w-10"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                ></path>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -256,11 +489,7 @@
                 </div>
                 <div class="col-12"></div>
                 <div class="col-12">
-                  <p>
-                    Introducir una BioCap® en el recipiente desde el cual se
-                    quiera utilizar el producto (pulverizador, balde,
-                    lavarropas, etc.).
-                  </p>
+                  <p>Una BioCap® en el envase (pulverizador o balde).</p>
                 </div>
               </div>
             </div>
@@ -280,14 +509,11 @@
             <div class="col-10 d-flex justify-content-center flex-column">
               <div class="row">
                 <div class="col-12">
-                  <h4>Esperar</h4>
+                  <h4>Esperar y agitar</h4>
                 </div>
                 <div class="col-12"></div>
                 <div class="col-12">
-                  <p>
-                    Esperar 2 minutos, el agua romperá la bolsa y entrará en
-                    contacto con el agua
-                  </p>
+                  <p>Esperar aproximadamente 2 minutos y agitar levemente.</p>
                 </div>
               </div>
             </div>
@@ -307,14 +533,11 @@
             <div class="col-10 d-flex justify-content-center flex-column">
               <div class="row">
                 <div class="col-12">
-                  <h4>Agitar</h4>
+                  <h4>¡Listo para usar!</h4>
                 </div>
                 <div class="col-12"></div>
                 <div class="col-12">
-                  <p>
-                    Agitar hasta su homogenización y nada más, ¡ya está listo
-                    para ser utilizado!
-                  </p>
+                  <p>Una vez homogenizado, ¡Ya puede ser utilizado!</p>
                 </div>
               </div>
             </div>
@@ -322,6 +545,220 @@
         </div>
       </div>
     </div>
+    <div class="faq my-5" id="faqs">
+      <div class="container">
+        <div class="row gap-5">
+          <div class="col-4">
+            <div class="mb-5">
+              <h3>FAQs</h3>
+            </div>
+            <div class="faq-questions">
+              <p class="ps-3 py-2" onclick="faqSelect1()" id="faqanswer1">
+                ¿Qué hace únicas a BioCaps?
+              </p>
+              <p class="px-3 py-2" onclick="faqSelect2()" id="faqanswer2">
+                ¿2 BioCaps mejoran rendimiento?
+              </p>
+              <p class="px-3 py-2" onclick="faqSelect3()" id="faqanswer3">
+                ¿Por qué reutilizar mi botella?
+              </p>
+              <p class="px-3 py-2" onclick="faqSelect4()" id="faqanswer4">
+                ¿De qué está hecha la cápsula?
+              </p>
+              <p class="px-3 py-2" onclick="faqSelect5()" id="faqanswer5">
+                ¿Cuánto duran en mi estantería?
+              </p>
+            </div>
+          </div>
+          <div class="col-7 faq-answers">
+            <div class="faq-answers-div" id="faqDiv1">
+              <div class="mb-5">
+                <h5>¿Qué hace únicas a BioCaps?</h5>
+              </div>
+              <div>
+                <p>
+                  Es un formato de limpieza práctico y efectivo, que por sobre
+                  todo, no genera ningún tipo de residuo en el envase y usas el
+                  100% del producto. Tecnología en limpieza, llevado a cabo con
+                  responsabilidad y empatía con el medio en el que vivimos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-answers-div" id="faqDiv2">
+              <div class="mb-5">
+                <h5>¿2 BioCaps mejoran rendimiento?</h5>
+              </div>
+              <div>
+                <p>
+                  Nuestras BioCaps están diseñadas específicamente para brindar
+                  una limpieza superior utilizando solo una. De todas formas
+                  puede aumentar el rendimiento y personalizar el producto
+                  agregando una o más cápsulas.
+                </p>
+              </div>
+            </div>
+            <div class="faq-answers-div" id="faqDiv3">
+              <div class="mb-5">
+                <h5>¿Por qué reutilizar mi botella?</h5>
+              </div>
+              <div>
+                <p>
+                  Más allá de que muchos tipos de plásticos son reciclables, en
+                  su gran mayoría son desechados y permanecen largos años en el
+                  medio-ambiente hasta degradarse. Para reducir este problema,
+                  proponemos la reutilización de la botella. Esto comprende una
+                  enorme ayuda a la huella de carbono del plástico.
+                </p>
+              </div>
+            </div>
+            <div class="faq-answers-div" id="faqDiv4">
+              <div class="mb-5">
+                <h5>¿De qué está hecha la cápsula?</h5>
+              </div>
+              <div>
+                <p>
+                  Las BioCaps están hechas de una película biodegradable y
+                  soluble en agua que es 100% biodegradable y se disuelve
+                  completamente en agua sin generar micro o nano plásticos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-answers-div" id="faqDiv5">
+              <div class="mb-5">
+                <h5>¿Cuánto duran en mi estantería?</h5>
+              </div>
+              <div>
+                <p>
+                  Pueden durar hasta 1 año, conservándolas en las condiciones
+                  recomendadas, entre 12 y 24 grados centígrados y manteniendo
+                  el envase cerrado herméticamente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#709646"
+        fill-opacity="1"
+        d="M0,128L48,133.3C96,139,192,149,288,165.3C384,181,480,203,576,186.7C672,171,768,117,864,117.3C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+    <div class="instagram">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <h4>Seguinos en Instagram.</h4>
+          </div>
+          <div class="col-8 d-flex">
+            <div class="slick-list" id="slick-list">
+              <button
+                class="slick-arrow slick-prev"
+                id="button-prev"
+                data-button="button-prev"
+                onclick="app.processingButton(event)"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="chevron-left"
+                  class="svg-inline--fa fa-chevron-left fa-w-10"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                  ></path>
+                </svg>
+              </button>
+              <div class="slick-track" id="track">
+                <div class="slick">
+                  <div class="position-relative">
+                    <a href="/" class="d-flex justify-content-center">
+                      <picture>
+                        <img src="./img/products-1.jpg" alt="Image" />
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <div class="slick">
+                  <div class="position-relative">
+                    <a href="/" class="d-flex justify-content-center">
+                      <picture>
+                        <img src="./img/logo.png" alt="Image" />
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <div class="slick">
+                  <div class="position-relative">
+                    <a href="/" class="d-flex justify-content-center">
+                      <picture>
+                        <img src="./img/products-2.jpg" alt="Image" />
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <div class="slick">
+                  <div class="position-relative">
+                    <a href="/" class="d-flex justify-content-center">
+                      <picture>
+                        <img src="./img/logo.png" alt="Image" />
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <div class="slick">
+                  <div class="position-relative">
+                    <a href="/" class="d-flex justify-content-center">
+                      <picture>
+                        <img src="./img/logo.png" alt="Image" />
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="slick-arrow slick-next"
+                id="button-next"
+                data-button="button-next"
+                onclick="app.processingButton(event)"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="chevron-right"
+                  class="svg-inline--fa fa-chevron-right fa-w-10"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#709646"
+        fill-opacity="1"
+        d="M0,128L48,133.3C96,139,192,149,288,165.3C384,181,480,203,576,186.7C672,171,768,117,864,117.3C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+      ></path>
+    </svg>
+
     <div class="contact py-5" id="contacto">
       <div class="container">
         <div class="row">
@@ -349,13 +786,7 @@
                     </label>
                   </div>
                   <div class="wave-group my-3">
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      class="input"
-                      
-                    />
+                    <input required type="email" name="email" class="input" />
                     <span class="bar"></span>
                     <label class="label">
                       <span class="label-char" style="--index: 0">E</span>
@@ -391,38 +822,46 @@
                     name="message"
                     required
                     placeholder="Su mensaje"
-                    style="width: 430px; height: 200px;"
+                    style="width: 430px; height: 200px"
                   ></textarea>
-                  <button class="button2" type="submit">
-                    Enviar
-                </button>
+                  <button class="button2" type="submit">Enviar</button>
                 </div>
-              </div> 
+              </div>
             </form>
           </div>
-          <div class="col-6 py-2 d-flex justify-content-center flex-column">
+          <div
+            class="col-6 py-2 d-flex justify-content-center flex-column gap-4"
+          >
             <p>Ante cualquier consulta, no dudes en preguntar.</p>
-            <div class="d-flex contact-info">
-              <img src="./img/contact-location.svg" alt="Ubicación">
-              <div class="d-flex flex-column">
+            <div class="d-flex contact-info align-items-center">
+              <img
+                src="./img/contact-location.svg"
+                alt="Ubicación"
+                class="contact-ubi"
+              />
+              <div class="d-flex flex-column justify-content-center ms-3">
                 <p class="my-0 contact-subtitles">Dirección:</p>
-                <p>Tapalque 5130/5132, CABA, Buenos Aires</p>  
-              </div>  
+                <p class="my-0">Tapalque 5130/5132, CABA, Buenos Aires</p>
+              </div>
             </div>
-            <div class="d-flex contact-info">
-              <img src="./img/contact-email.svg" alt="Ubicación">
-              <div class="d-flex flex-column">
+            <div class="d-flex contact-info align-items-center">
+              <img src="./img/contact-email.svg" alt="Ubicación" />
+              <div class="d-flex flex-column justify-content-center ms-3">
                 <p class="my-0 contact-subtitles">Email:</p>
-                <a href="mailto:info@biocaps.com.ar" class="contact-link-p mb-2"><p>info@biocaps.com.ar</p></a>  
-              </div>  
+                <a href="mailto:info@biocaps.com.ar" class="contact-link-p mb-2"
+                  ><p class="my-0">info@biocaps.com.ar</p></a
+                >
+              </div>
             </div>
-            <div class="d-flex contact-info">
-              <img src="./img/whatsapp.svg" alt="Ubicación">
-              <div class="d-flex flex-column">
+            <div class="d-flex contact-info align-items-center">
+              <img src="./img/whatsapp.svg" alt="Ubicación" />
+              <div class="d-flex flex-column justify-content-center ms-3">
                 <p class="my-0 contact-subtitles">WhatsApp:</p>
-                <a href="#" class="contact-link"><p class="my-0 contact-link">Enviar un mensaje</p></a>  
-              </div>  
-            </div>            
+                <a href="#" class="contact-link"
+                  ><p class="my-0 contact-link">Enviar un mensaje</p></a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -430,11 +869,11 @@
 
     <footer>
       <div
-      class="row px-4 py-2 d-flex align-items-center justify-content-between pre-navbar"
-      id="home"
-    >
+        class="row px-4 py-2 d-flex align-items-center justify-content-between pre-navbar"
+        id="home"
+      >
         <div class="col-6">
-          <p class="mb-0">Copyright © 2023 Biocaps</p>
+          <p class="mb-0 ps-3">Copyright © 2023 BIOCAPS</p>
         </div>
         <div class="col-6 d-flex justify-content-end gap-3">
           <img src="./img/instagram.svg" alt="instagram" />
