@@ -157,7 +157,8 @@ html {
     opacity: 1; } }
 
 .pre-navbar {
-  background-color: #709646; }
+  background-color: #709646;
+  overflow: hidden; }
   .pre-navbar p {
     color: #ffffff;
     font-weight: bold;
@@ -168,14 +169,18 @@ html {
     height: 1.3rem; }
 
 .beneficios img {
-  height: 7rem;
+  height: 5rem;
   width: auto; }
+  @media (min-width: 1200px) {
+    .beneficios img {
+      height: 7rem; } }
 
-/* .beneficios-desc {
-  color: #4b6826;
-  font-weight: bold;
-  font-size: 1.2rem;
-}*/
+.beneficios h2 {
+  font-size: 1.75rem; }
+  @media (min-width: 1200px) {
+    .beneficios h2 {
+      font-size: 2.5rem; } }
+
 .cta {
   border: none;
   background: none; }
@@ -386,7 +391,10 @@ html {
     opacity: 1; } }
 
 .faq-answers {
-  line-height: 2.5rem; }
+  line-height: 1.75rem; }
+  @media (min-width: 1200px) {
+    .faq-answers {
+      line-height: 2.5rem; } }
   .faq-answers .faq-answers-div {
     transition: all 1s ease;
     display: none;
@@ -409,10 +417,19 @@ html {
   font-size: 16px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 200px;
+  width: 300px;
   border: none;
   border-bottom: 1px solid #494949;
   background: transparent; }
+  @media (min-width: 1200px) {
+    .wave-group .input {
+      width: 430px; } }
+
+.wave-first-custom {
+  margin-right: 0px; }
+  @media (min-width: 1200px) {
+    .wave-first-custom {
+      margin-right: 30; } }
 
 .wave-group .input:focus {
   outline: none; }
@@ -440,10 +457,19 @@ html {
 .wave-group .bar {
   position: relative;
   display: block;
-  width: 200px; }
+  width: 300px; }
+  @media (min-width: 1200px) {
+    .wave-group .bar {
+      width: 430px; } }
 
 .wave-group .bar-asunto {
-  width: 430px; }
+  width: 100%; }
+
+.wave-group input {
+  width: 300px; }
+  @media (min-width: 1200px) {
+    .wave-group input {
+      width: 430px; } }
 
 .wave-group .bar:before,
 .wave-group .bar:after {
@@ -468,10 +494,15 @@ html {
   width: 50%; }
 
 .contact-message {
-  width: 250px;
+  width: 300px;
+  height: 200px;
   border: 1px #709646;
   border-style: solid;
   background-color: transparent; }
+  @media (min-width: 1200px) {
+    .contact-message {
+      width: 430px;
+      height: 200px; } }
 
 .button2 {
   display: inline-block;

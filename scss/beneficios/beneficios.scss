@@ -1,7 +1,16 @@
 .beneficios {
   img {
-    height: 7rem;
+    height: 5rem;
     width: auto;
+    @include min-1200 {
+      height: 7rem;
+    }
   }
+  h2 {
+    font-size: 1.75rem;
+    @include min-1200 {
+      font-size: 2.5rem
+    }
+  } 
 }
 
