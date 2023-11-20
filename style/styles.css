@@ -173,12 +173,15 @@ html {
 .beneficios img {
   height: 5rem;
   width: auto; }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     .beneficios img {
       height: 7rem; } }
 
 .beneficios h2 {
   font-size: 1.75rem; }
+  @media (min-width: 992px) {
+    .beneficios h2 {
+      font-size: 2.15rem; } }
   @media (min-width: 1200px) {
     .beneficios h2 {
       font-size: 2.5rem; } }
@@ -402,6 +405,15 @@ html {
     display: none;
     opacity: 0;
     animation: selection 0.2s linear 0.1s forwards; }
+    .faq-answers .faq-answers-div h5 {
+      color: #709646;
+      font-weight: 700; }
+      @media (min-width: 992px) {
+        .faq-answers .faq-answers-div h5 {
+          font-size: 1.75rem; } }
+      @media (min-width: 1200px) {
+        .faq-answers .faq-answers-div h5 {
+          font-size: 2rem; } }
 
 .instagram {
   background-color: #709646; }
@@ -423,15 +435,15 @@ html {
   border: none;
   border-bottom: 1px solid #494949;
   background: transparent; }
+  @media (min-width: 768px) {
+    .wave-group .input {
+      width: 480px; } }
   @media (min-width: 1200px) {
     .wave-group .input {
       width: 430px; } }
 
 .wave-first-custom {
   margin-right: 0px; }
-  @media (min-width: 1200px) {
-    .wave-first-custom {
-      margin-right: 30; } }
 
 .wave-group .input:focus {
   outline: none; }
@@ -460,6 +472,9 @@ html {
   position: relative;
   display: block;
   width: 300px; }
+  @media (min-width: 768px) {
+    .wave-group .bar {
+      width: 480px; } }
   @media (min-width: 1200px) {
     .wave-group .bar {
       width: 430px; } }
@@ -469,6 +484,9 @@ html {
 
 .wave-group input {
   width: 300px; }
+  @media (min-width: 768px) {
+    .wave-group input {
+      width: 480px; } }
   @media (min-width: 1200px) {
     .wave-group input {
       width: 430px; } }
@@ -501,6 +519,9 @@ html {
   border: 1px #709646;
   border-style: solid;
   background-color: transparent; }
+  @media (min-width: 768px) {
+    .contact-message {
+      width: 480px; } }
   @media (min-width: 1200px) {
     .contact-message {
       width: 430px;
