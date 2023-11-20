@@ -3,6 +3,8 @@
   background-image: url(../img/background-home.jpg);
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 @keyframes change-text {
