@@ -177,4 +177,71 @@ function changeTextInit() {
 
 changeTextInit()
 
+let shop = document.getElementById("shop")
+let body = document.getElementById("body")
+let loading = document.getElementById("loading")
+let close = document.getElementById("close")
 
+function openShop() {
+  body.style.cssText = "overflow: hidden;"
+  loading.style.cssText = "display: flex;"
+  setTimeout( () => {
+    shop.style.cssText = "display: block;" 
+    close.style.cssText = "display:block"
+  }
+  , "1000")
+  setTimeout( () => {
+    loading.style.cssText = "display: none"
+  }
+  , "5000")
+}
+
+function closeShop() {
+  loading.style.cssText = "display: flex;"
+  setTimeout( () => {
+    shop.style.cssText = "display: none;" 
+    close.style.cssText = "display: none"
+  }
+  , "1000")
+  setTimeout( () => {
+    loading.style.cssText = "display: none"
+    body.style.cssText = "overflow-y: scroll;"
+  }
+  , "5000")
+}
+
+let popUp = document.getElementById("popup")
+let phrase = document.getElementById("phrase-11")
+
+function closePopUp() {
+  popUp.style.cssText = "display: none !important"
+  phrase.style.cssText = "display: none !important"
+
+  let x = Math.floor(Math.random()*11);
+  phrase = document.getElementById("phrase-" + x)
+
+  setTimeout ( () => {
+    popUp.style.cssText = "display: flex !important"
+    phrase.style.cssText = "display: block !important"
+  
+  }, "25000")
+}
+
+
+
+
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));

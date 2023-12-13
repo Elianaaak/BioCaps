@@ -103,7 +103,7 @@ h5 {
   font-family: "Poppins", sans-serif;
   color: #494949;
   font-weight: 700;
-  font-size: 2.5rem; }
+  font-size: 2.3rem; }
 
 p {
   font-family: "Poppins", sans-serif;
@@ -125,6 +125,136 @@ html {
   background-color: #DEE5DA;
   position: fixed; }
 
+@keyframes loading-shop {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes charging {
+  0% {
+    width: 100%; }
+  15% {
+    width: 100%; }
+  40% {
+    width: 75%; }
+  55% {
+    width: 75%; }
+  65% {
+    width: 40%; }
+  75% {
+    width: 40%; }
+  95% {
+    width: 0%; } }
+
+.shop {
+  position: fixed;
+  z-index: 11000;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none; }
+
+.loading {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 12000;
+  background-color: #fff;
+  display: none;
+  animation: loading-shop 5s ease forwards;
+  opacity: 0;
+  justify-content: center;
+  align-items: center; }
+  .loading div {
+    display: flex;
+    overflow: hidden;
+    justify-content: end; }
+  .loading img {
+    height: 6.5rem;
+    width: auto; }
+  .loading .grayscale {
+    position: absolute;
+    z-index: 13000;
+    height: 6.5rem;
+    width: 100%;
+    backdrop-filter: grayscale(100%);
+    animation: charging 5s linear forwards; }
+
+.close-div {
+  display: none;
+  position: fixed;
+  left: 4em;
+  bottom: 4em;
+  z-index: 11500; }
+
+.button-close {
+  position: relative;
+  width: 4em;
+  height: 4em;
+  transform: scale(0.9);
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s; }
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: black;
+  transform: translateX(-50%) rotate(45deg); }
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #000000;
+  transform: translateX(-50%) rotate(-45deg); }
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: #131618;
+  color: #bbe5ec;
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0; }
+
+.button-close:hover {
+  background-color: #d31515; }
+
+.button-close:active {
+  background-color: #820000; }
+
+.button-close:hover > .close {
+  animation: close 0.2s forwards 0.25s; }
+
+@keyframes close {
+  100% {
+    opacity: 1; } }
+
 .nav-logo {
   height: auto;
   width: 8.5rem; }
@@ -137,7 +267,8 @@ html {
 
 .nav-cart {
   height: auto;
-  width: 2.3rem; }
+  width: 2.3rem;
+  cursor: pointer; }
 
 .nav-custom {
   background-color: #ffffff;
@@ -346,32 +477,63 @@ html {
   background-color: white;
   border-radius: 0px 20px; }
 
+.products-subtitle {
+  text-decoration: underline;
+  text-decoration-color: #709646;
+  cursor: pointer; }
+
 .howto {
-  background-color: #DEE5DA;
+  background-color: #709646;
   position: sticky;
   top: 0;
   z-index: 2000; }
+  .howto h4 {
+    color: #ffffff; }
+  .howto p {
+    color: #ffffff; }
 
 .howto-2 {
-  background-color: #ffffff;
+  background-color: #9dba78;
   z-index: 2001; }
+  .howto-2 h4 {
+    color: #ffffff; }
+  .howto-2 p {
+    color: #ffffff; }
 
 .howto-3 {
+  background-color: #DEEFC7;
   position: sticky;
   z-index: 2002; }
+  .howto-3 h4 {
+    color: #494949; }
+  .howto-3 p {
+    color: #494949; }
 
 .use-step {
-  background-color: #709646;
+  background-color: #ffffff;
   border-radius: 50%;
   height: 4.5rem;
   width: 4.5rem; }
   .use-step p {
-    color: #ffffff;
+    color: #494949;
     font-size: 2.5rem;
     font-weight: bold; }
 
+.use-step2 {
+  background-color: #ffffff; }
+
+.use-step3 {
+  background-color: #494949; }
+  .use-step3 p {
+    color: #DEEFC7; }
+
 .use-1 {
-  height: 100vh; }
+  height: 90vh; }
+
+@media (min-width: 992px) {
+  .use-first div {
+    position: sticky;
+    top: 50vh; } }
 
 .faq-questions p {
   border-radius: 10px;
@@ -415,14 +577,89 @@ html {
         .faq-answers .faq-answers-div h5 {
           font-size: 2rem; } }
 
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5; }
+  .accordion .accordion-item button[aria-expanded='true'] {
+    border-bottom: 1px solid #709646; }
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none; }
+  .accordion button:hover, .accordion button:focus {
+    cursor: pointer;
+    color: #709646; }
+    .accordion button:hover::after, .accordion button:focus::after {
+      cursor: pointer;
+      color: #709646;
+      border: 1px solid #709646; }
+  .accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0; }
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px; }
+    .accordion button .icon::before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 9px;
+      left: 5px;
+      width: 10px;
+      height: 2px;
+      background: currentColor; }
+    .accordion button .icon::after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      background: currentColor; }
+
+.accordion button[aria-expanded='true'] {
+  color: #709646; }
+  .accordion button[aria-expanded='true'] .icon::after {
+    width: 0; }
+  .accordion button[aria-expanded='true'] + .accordion-content {
+    opacity: 1;
+    max-height: 15em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height; }
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height; }
+  .accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0; }
+
 .instagram {
-  background-color: #709646; }
+  background-color: #DEE5DA; }
   .instagram .slick-arrow {
     background-color: #ffffff; }
     .instagram .slick-arrow svg {
       color: #494949; }
   .instagram h4 {
-    color: #ffffff; }
+    color: #494949; }
 
 .wave-group {
   position: relative; }
@@ -605,3 +842,27 @@ html {
 
 .contact-link-p {
   text-decoration: none; }
+
+.contact-socials img {
+  width: 4.5rem;
+  height: auto; }
+
+.popup {
+  bottom: 0;
+  width: 17.5rem;
+  border-radius: 20px;
+  right: 0;
+  background-color: bisque;
+  z-index: 11500;
+  cursor: pointer;
+  display: none; }
+  .popup img {
+    height: 4.5rem;
+    width: auto; }
+  .popup p {
+    z-index: 11550;
+    font-size: 1rem; }
+  .popup:hover {
+    opacity: 0.7; }
+  .popup .phrases {
+    display: none; }
