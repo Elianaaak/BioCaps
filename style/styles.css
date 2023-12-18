@@ -589,7 +589,7 @@ html {
   width: 100%;
   padding: 1em 0;
   color: #7288a2;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 400;
   border: none;
   background: none;
@@ -637,7 +637,7 @@ html {
     width: 0; }
   .accordion button[aria-expanded='true'] + .accordion-content {
     opacity: 1;
-    max-height: 15em;
+    max-height: 20em;
     transition: all 200ms linear;
     will-change: opacity, max-height; }
 
@@ -857,8 +857,12 @@ html {
   cursor: pointer;
   display: none; }
   .popup img {
-    height: 4.5rem;
-    width: auto; }
+    height: 2rem;
+    width: auto;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    padding-top: 5px; }
   .popup p {
     z-index: 11550;
     font-size: 1rem; }

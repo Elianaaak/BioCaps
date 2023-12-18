@@ -211,20 +211,24 @@ function closeShop() {
 }
 
 let popUp = document.getElementById("popup")
-let phrase = document.getElementById("phrase-11")
+let x = Math.floor(Math.random()*12);
+let phrase = document.getElementById("phrase-" + x)
+popUp.style.cssText = "display: flex !important"
+phrase.style.cssText = "display: block !important"
+
 
 function closePopUp() {
   popUp.style.cssText = "display: none !important"
   phrase.style.cssText = "display: none !important"
 
-  let x = Math.floor(Math.random()*11);
+  x = Math.floor(Math.random()*12);
   phrase = document.getElementById("phrase-" + x)
 
   setTimeout ( () => {
     popUp.style.cssText = "display: flex !important"
     phrase.style.cssText = "display: block !important"
   
-  }, "25000")
+  }, "20000")
 }
 
 
