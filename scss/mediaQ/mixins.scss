@@ -21,3 +21,9 @@
     @content
   }
 }
+
+@mixin max-420 {
+  @media (max-width: 420px) {
+    @content
+  }
+}

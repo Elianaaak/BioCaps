@@ -196,19 +196,19 @@ function openShop() {
   , "5000")
 }
 
-function closeShop() {
-  loading.style.cssText = "display: flex;"
-  setTimeout( () => {
-    shop.style.cssText = "display: none;" 
-    close.style.cssText = "display: none"
-  }
-  , "1000")
-  setTimeout( () => {
-    loading.style.cssText = "display: none"
-    body.style.cssText = "overflow-y: scroll;"
-  }
-  , "5000")
-}
+// function closeShop() {
+//   loading.style.cssText = "display: flex;"
+//   setTimeout( () => {
+//     shop.style.cssText = "display: none;" 
+//     close.style.cssText = "display: none"
+//   } SI SE ELIMINA EL BOTON DE CERRAR, ELIMINAR ESTO TAMBIEN Y LOS ESTILOS
+//   , "1000")
+//   setTimeout( () => {
+//     loading.style.cssText = "display: none"
+//     body.style.cssText = "overflow-y: scroll;"
+//   }
+//   , "5000")
+// }
 
 let popUp = document.getElementById("popup")
 let x = Math.floor(Math.random()*12);

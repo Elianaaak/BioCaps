@@ -212,7 +212,15 @@
 
 .contact-socials {
   img {
-    width: 4.5rem;
+    width: 3.5rem;
     height: auto;
+    @include min-768 {
+      width: 4.5rem;
+    }
   }
+}
+
+.contact-order2 {
+  border-radius: 20px;
+  background-color: $color-primary;
 }

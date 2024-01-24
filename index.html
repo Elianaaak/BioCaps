@@ -16,7 +16,7 @@
   </head>
   <body class="overflow-x-hidden position-relative" id="body">
 
-    <div class="popup position-fixed m-3 p-3 d-flex justify-content-center align-items-center" id="popup" onclick="closePopUp()">
+    <div class="popup position-fixed m-0 m-md-3 p-3 d-flex justify-content-center align-items-center" id="popup" onclick="closePopUp()">
       <img src="./img/popup-icon.png" alt="BioCaps" class="position-absolute">
       <p class="m-0 phrases" id="phrase-0" >"Con cada cápsula, estás reduciendo la huella de carbono."</p>
       <p class="m-0 phrases" id="phrase-1" >"Argentina recicló 318.000 toneladas de plástico el año pasado."</p>
@@ -32,13 +32,13 @@
       <p class="m-0 phrases" id="phrase-11" >"Por cada compra que se realiza en la web, estamos donando una cápsula a una ONG."</p>
     </div>
 
-    <div class="close-div" id="close" onclick="closeShop()">
+    <!-- <div class="close-div" id="close" onclick="closeShop()">
       <button class="button-close">
-        <span class="X"></span>
+        <span class="X"></span> SI SE DECIDE ELIMINAR, BORRAR TAMBIEN LOS ESTILOS APARTE DE ESTO. 
         <span class="Y"></span>
         <div class="close">Cerrar</div>
       </button>
-    </div>
+    </div> -->
 
     <div class="loading" id="loading">
       <div class="position-relative">
@@ -203,18 +203,18 @@
         <div
           class="col-12 px-0 ps-4 ps-xl-5 ms-xl-4 d-flex justify-content-center flex-column d-xl-block"
         >
-          <h2 data-aos="fade-right" data-aos-delay="600">Un futuro más limpio.</h2>
+          <h2 data-aos="fade-right" data-aos-delay="600" class="main-title">Un futuro más limpio.</h2>
           <button class="learn-more mt-4" onclick="openShop()" data-aos="fade-right" data-aos-delay="400">
             <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
             </span>
-            <span class="button-text">shop</span>
+            <span class="button-text" id="beneficios">shop</span>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="container" id="beneficios">
+    <div class="container">
       <div
         class="row d-flex justify-content-between beneficios py-5 align-items-center"
       >
@@ -238,14 +238,14 @@
           <p class="text-center">Manipulación segura</p>
         </div>
         <div
-          class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center" id="productos"
+          class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center"
         >
           <img
             src="./img/beneficios-icon1.svg"
             alt="Ahorro de espacio"
             class="mb-2"
           />
-          <p class="text-center">Espacio</p>
+          <p class="text-center" id="productos">Espacio</p>
         </div>
       </div>
     </div>
@@ -535,7 +535,7 @@
       </div>
     </div>
 
-    <div>
+    <div id="uso">
       <svg
         id="wave"
         style="transform: rotate(0deg); transition: 0.3s"
@@ -577,7 +577,7 @@
           d="M0,0L48,25C96,50,192,100,288,125C384,150,480,150,576,125C672,100,768,50,864,50C960,50,1056,100,1152,135C1248,170,1344,190,1440,185C1536,180,1632,150,1728,145C1824,140,1920,160,2016,175C2112,190,2208,200,2304,210C2400,220,2496,230,2592,235C2688,240,2784,240,2880,225C2976,210,3072,180,3168,155C3264,130,3360,110,3456,90C3552,70,3648,50,3744,75C3840,100,3936,170,4032,190C4128,210,4224,180,4320,155C4416,130,4512,110,4608,100C4704,90,4800,90,4896,110C4992,130,5088,170,5184,160C5280,150,5376,90,5472,75C5568,60,5664,90,5760,110C5856,130,5952,140,6048,125C6144,110,6240,70,6336,45C6432,20,6528,10,6624,40C6720,70,6816,140,6864,175L6912,210L6912,300L6864,300C6816,300,6720,300,6624,300C6528,300,6432,300,6336,300C6240,300,6144,300,6048,300C5952,300,5856,300,5760,300C5664,300,5568,300,5472,300C5376,300,5280,300,5184,300C5088,300,4992,300,4896,300C4800,300,4704,300,4608,300C4512,300,4416,300,4320,300C4224,300,4128,300,4032,300C3936,300,3840,300,3744,300C3648,300,3552,300,3456,300C3360,300,3264,300,3168,300C3072,300,2976,300,2880,300C2784,300,2688,300,2592,300C2496,300,2400,300,2304,300C2208,300,2112,300,2016,300C1920,300,1824,300,1728,300C1632,300,1536,300,1440,300C1344,300,1248,300,1152,300C1056,300,960,300,864,300C768,300,672,300,576,300C480,300,384,300,288,300C192,300,96,300,48,300L0,300Z"
         ></path>
       </svg>
-      <div class="howto" id="uso">
+      <div class="howto">
         <div class="container">
           <div class="row use-1 use-first">
             <div
@@ -597,7 +597,7 @@
                   <h4>Introducir</h4>
                 </div>
                 <div class="col-12"></div>
-                <div class="col-12 text-center text-lg-start" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                <div class="col-12 text-center text-lg-start" data-aos="fade-right" data-aos-delay="650" data-aos-once="true">
                   <p>Una BioCap® en el envase (pulverizador o balde).</p>
                 </div>
               </div>
@@ -625,7 +625,7 @@
                   <h4>Esperar y agitar</h4>
                 </div>
                 <div class="col-12"></div>
-                <div class="col-12 text-center text-lg-start" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                <div class="col-12 text-center text-lg-start" data-aos="fade-right" data-aos-delay="650" data-aos-once="true">
                   <p>Esperar aproximadamente 2 minutos y agitar levemente.</p>
                 </div>
               </div>
@@ -653,7 +653,7 @@
                   <h4>¡Listo para usar!</h4>
                 </div>
                 <div class="col-12"></div>
-                <div class="col-12 text-center text-lg-start" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                <div class="col-12 text-center text-lg-start" data-aos="fade-right" data-aos-delay="650" data-aos-once="true">
                   <p id="faqs">Una vez homogenizado, ¡Ya puede ser utilizado!</p>
                 </div>
               </div>
@@ -918,10 +918,10 @@
       </div>
     </div>
 
-    <div class="contact py-xl-5 mb-5 mb-xl-0" id="contacto">
+    <div class="contact py-xl-5 mb-0 mb-sm-5 mb-xl-0" id="contacto">
       <div class="container">
         <div class="row">
-          <div class="order-2 col-12 col-xl-6 d-flex justify-content-center">
+          <div class="order-2 col-12 col-xl-6 d-flex justify-content-center contact-order2">
             <form
               action="https://formsubmit.co/your@email.com"
               method="POST"
@@ -983,7 +983,7 @@
           <div
             class="order-1 col-12 col-xl-6 py-2 d-flex justify-content-center flex-column gap-4"
           >
-            <p class="mt-4 mt-xl-0 text-center text-xl-start">Ante cualquier consulta, no dudes en preguntar.</p>
+            <p class="mt-4 mt-xl-0 text-center">Ante cualquier consulta, no dudes en preguntar.</p>
             <div class="d-flex contact-info align-items-center">
               <img
                 src="./img/contact-location.svg"
@@ -1007,10 +1007,11 @@
 
             <!-- PARA HOY LUNES, REVISAR SITIO EN CELULAR Y HACER LOS CAMBIOS, ANIMAR SITIO UNA LOCURA-->
 
-            <div class="d-flex justify-content-center contact-socials gap-3">
+            <div class="d-flex justify-content-center contact-socials gap-3 mt-3">
               <img src="./img/instagram-svgrepo-com.svg" alt="instagram" />
               <img src="./img/tiktok-contact.svg" alt="tiktok"/>
               <img src="./img/twitter-svgrepo-com.svg" alt="">
+              <img src="./img/youtube-svgrepo-com.svg" alt="">
             </div>
           </div>
         </div>
