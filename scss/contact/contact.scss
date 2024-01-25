@@ -218,9 +218,14 @@
       width: 4.5rem;
     }
   }
+  background-color: $color-secondary;
+  border-radius: 15px;
 }
 
 .contact-order2 {
+  @include max-576 {
+    border-radius: 0;
+  }
   border-radius: 20px;
   background-color: $color-primary;
 }
