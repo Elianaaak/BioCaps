@@ -33,7 +33,18 @@
 
 .learn-more {
   width: 12rem;
-  height: auto; }
+  height: auto;
+  align-items: center;
+  justify-content: center; }
+  .learn-more:hover .circle-after {
+    width: 100%; }
+  .learn-more:hover .icon.arrow::before {
+    transition: all 0.20s ease;
+    border-top: 0.125rem solid #709646 !important;
+    border-right: 0.125rem solid #709646 !important; }
+  .learn-more:hover .button-text {
+    transition: all 0.20s ease;
+    color: #709646; }
 
 .learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -43,7 +54,8 @@
   width: 3rem;
   height: 3rem;
   background: #709646;
-  border-radius: 1.625rem; }
+  border-radius: 1.625rem;
+  width: 100%; }
 
 .learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -58,7 +70,9 @@
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
-  background: none; }
+  background: none;
+  transform: translate(1rem, 0);
+  z-index: 2; }
 
 .learn-more .circle .icon.arrow::before {
   position: absolute;
@@ -80,19 +94,19 @@
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #494949;
+  color: #fff;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase; }
 
-.learn-more:hover .circle {
-  width: 100%; }
-
-.learn-more:hover .circle .icon.arrow {
-  transform: translate(1rem, 0); }
-
-.learn-more:hover .button-text {
-  color: #fff; }
+.circle-after {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  display: block;
+  margin: 0;
+  background: #dee5da;
+  border-radius: 1.625rem;
+  width: 0;
+  height: 3rem; }
 
 /* Fuentes */
 h1,
@@ -132,7 +146,7 @@ html {
   z-index: 10000;
   height: 100vh;
   width: 100vw;
-  background-color: #DEE5DA;
+  background-color: #dee5da;
   position: fixed; }
 
 @keyframes loading-shop {
@@ -450,7 +464,7 @@ html {
 /* buttons */
 .slick-arrow {
   border-radius: 30px;
-  background-color: #DEE5DA;
+  background-color: #dee5da;
   position: absolute;
   z-index: 4;
   width: 48px;
@@ -548,6 +562,81 @@ html {
   .use-first div {
     position: sticky;
     top: 50vh; } }
+
+@keyframes wave_anim {
+  0% {
+    translate: 0%; }
+  100% {
+    translate: -100%; } }
+
+@keyframes wave-2_anim {
+  0% {
+    translate: 100%; }
+  100% {
+    translate: 0%; } }
+
+@keyframes wave_anim-2 {
+  0% {
+    translate: -100%; }
+  100% {
+    translate: 0%; } }
+
+@keyframes wave-2_anim-2 {
+  0% {
+    translate: 0%; }
+  100% {
+    translate: 100%; } }
+
+@keyframes wave_anim-3 {
+  0% {
+    translate: 2%; }
+  100% {
+    translate: -98%; } }
+
+@keyframes wave-2_anim-3 {
+  0% {
+    translate: 100%; }
+  100% {
+    translate: 0%; } }
+
+.wave {
+  animation: wave_anim 20s ease-in-out infinite alternate; }
+  @media min-768 {
+    .wave {
+      animation: wave_anim 40s ease-in-out infinite alternate; } }
+
+.wave-2 {
+  transform: scaleX(-1) !important;
+  position: absolute;
+  translate: 100%;
+  animation: wave-2_anim 20s ease-in-out infinite alternate; }
+  @media min-768 {
+    .wave-2 {
+      animation: wave-2_anim 40s ease-in-out infinite alternate; } }
+
+.wave_layer-2 {
+  animation: wave_anim-2 20s ease-in-out infinite alternate; }
+  @media min-768 {
+    .wave_layer-2 {
+      animation: wave_anim-2 40s ease-in-out infinite alternate; } }
+
+.wave-2_layer-2 {
+  animation: wave-2_anim-2 20s ease-in-out infinite alternate; }
+  @media min-768 {
+    .wave-2_layer-2 {
+      animation: wave-2_anim-2 40s ease-in-out infinite alternate; } }
+
+.wave_layer-3 {
+  animation: wave_anim-3 30s ease-in-out infinite alternate; }
+  @media min-768 {
+    .wave_layer-3 {
+      animation: wave_anim-3 60s ease-in-out infinite alternate; } }
+
+.wave-2_layer-3 {
+  animation: wave-2_anim-3 30s ease-in-out infinite alternate; }
+  @media min-768 {
+    .wave-2_layer-3 {
+      animation: wave-2_anim-3 60s ease-in-out infinite alternate; } }
 
 .faq-questions p {
   border-radius: 10px;
@@ -675,7 +764,7 @@ html {
   color: #494949; }
 
 .instagram .row {
-  background-color: #DEE5DA;
+  background-color: #dee5da;
   border-radius: 20px; }
   @media (max-width: 576px) {
     .instagram .row {
@@ -782,7 +871,7 @@ html {
   @media (min-width: 1200px) {
     .contact-message {
       width: 430px;
-      height: 200px; } }
+      height: 100px; } }
 
 .button2 {
   display: inline-block;
@@ -854,12 +943,6 @@ html {
 .contact-info .contact-subtitles {
   font-weight: bold; }
 
-.contact-link {
-  text-decoration: none; }
-  .contact-link p {
-    padding-bottom: 0.1rem;
-    border-bottom: 2px solid #709646; }
-
 .contact-link-p {
   text-decoration: none; }
 
@@ -875,10 +958,13 @@ html {
 
 .contact-order2 {
   border-radius: 20px;
-  background-color: #DEE5DA; }
+  background-color: #dee5da; }
   @media (max-width: 576px) {
     .contact-order2 {
       border-radius: 0; } }
+
+.contact-icons a img {
+  height: 2.5rem; }
 
 @keyframes popUp {
   0% {

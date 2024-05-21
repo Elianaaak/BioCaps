@@ -1,12 +1,3 @@
-// window.addEventListener("scroll", function () {
-//   let frame1 = document.getElementById("scroll-behavior");
-//   let posFrame1 = frame1.getBoundingClientRect().top;
-
-//   if (posFrame1 < 0) {
-//     frame1.style.cssText = 'position: fixed; top: 0; left: 0; right: 0; bottom: 0;'
-
-//   }
-// });
 
 function App() {}
 
@@ -195,20 +186,6 @@ function openShop() {
   }
   , "5000")
 }
-
-// function closeShop() {
-//   loading.style.cssText = "display: flex;"
-//   setTimeout( () => {
-//     shop.style.cssText = "display: none;" 
-//     close.style.cssText = "display: none"
-//   } SI SE ELIMINA EL BOTON DE CERRAR, ELIMINAR ESTO TAMBIEN Y LOS ESTILOS
-//   , "1000")
-//   setTimeout( () => {
-//     loading.style.cssText = "display: none"
-//     body.style.cssText = "overflow-y: scroll;"
-//   }
-//   , "5000")
-// }
 
 let popUp = document.getElementById("popup")
 let x = Math.floor(Math.random()*12);

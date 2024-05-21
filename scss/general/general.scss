@@ -40,6 +40,22 @@
 .learn-more {
   width: 12rem;
   height: auto;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+    .circle-after{
+      width: 100%;
+    }
+    .icon.arrow::before {
+      transition: all 0.20s ease;
+      border-top: 0.125rem solid $color-secondary !important;
+      border-right: 0.125rem solid $color-secondary !important;
+    }
+    .button-text{
+      transition: all 0.20s ease;
+      color: $color-secondary;
+    }
+  }
 }
 
 .learn-more .circle {
@@ -51,6 +67,7 @@
   height: 3rem;
   background: $color-secondary;
   border-radius: 1.625rem;
+  width: 100%;
 }
 
 .learn-more .circle .icon {
@@ -68,6 +85,8 @@
   width: 1.125rem;
   height: 0.125rem;
   background: none;
+  transform: translate(1rem, 0);
+  z-index: 2;
 }
 
 .learn-more .circle .icon.arrow::before {
@@ -91,22 +110,20 @@
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: $black;
+  color: #fff;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
 }
 
-.learn-more:hover .circle {
-  width: 100%;
-}
-
-.learn-more:hover .circle .icon.arrow {
-  transform: translate(1rem, 0);
-}
-
-.learn-more:hover .button-text {
-  color: #fff;
+.circle-after {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  display: block;
+  margin: 0;
+  background: $color-primary;
+  border-radius: 1.625rem;
+  width: 0;
+  height: 3rem;
 }
 
 /* Fuentes */
