@@ -1,39 +1,39 @@
 .howto {
-    background-color: $color-secondary;
-    position: sticky;
-    top: 0;
-    z-index: 2000;
-    h4 {
-      color: $white;
-    }
-    p{
-      color: $white;
-    }
+  background-color: $color-secondary;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  h4 {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
 }
 
 .howto-2 {
-    background-color: #9dba78;
-    z-index: 2001;
-    h4 {
-      color: $white;
-    }
-    p{
-      color: $white;
-    }
+  background-color: #9dba78;
+  z-index: 2001;
+  h4 {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
 }
 
 .howto-3 {
-  background-color: #DEEFC7;
+  background-color: #deefc7;
   position: sticky;
   z-index: 2002;
   h4 {
     color: $black;
   }
-  p{
+  p {
     color: $black;
   }
+  border-bottom: 2px solid $color-secondary;
 }
-
 
 .use-step {
   background-color: $white;
@@ -52,78 +52,76 @@
 }
 
 .use-step3 {
- background-color: $black;
- p{
-  color: #DEEFC7;
- }
+  background-color: $black;
+  p {
+    color: #deefc7;
+  }
 }
 
 .use-1 {
-    height: 90vh;
-
+  height: 90vh;
 }
 
 .use-first {
   div {
     @include min-992 {
-      position:sticky;
-      top: 50vh;      
+      position: sticky;
+      top: 50vh;
     }
   }
 }
 
 @keyframes wave_anim {
-  0%{
+  0% {
     translate: 0%;
   }
   100% {
-    translate: -100%
+    translate: -100%;
   }
 }
 
 @keyframes wave-2_anim {
-  0%{
+  0% {
     translate: 100%;
   }
   100% {
-    translate: 0%
+    translate: 0%;
   }
 }
 
-
 @keyframes wave_anim-2 {
-  0%{
+  0% {
     translate: -100%;
   }
   100% {
-    translate: 0%
+    translate: 0%;
   }
 }
 
 @keyframes wave-2_anim-2 {
-  0%{
+  0% {
     translate: 0%;
   }
   100% {
-    translate: 100%
+    translate: 100%;
   }
 }
 
 @keyframes wave_anim-3 {
-  0%{
+  0% {
     translate: 2%;
   }
   100% {
-    translate: -98%
+    translate: -98%;
   }
 }
 
 @keyframes wave-2_anim-3 {
-  0%{
+  0% {
     translate: 100%;
   }
   100% {
-    translate: 0%
+    translate: 0%;
   }
 }
 
@@ -144,7 +142,6 @@
   }
 }
 
-
 .wave_layer-2 {
   animation: wave_anim-2 20s ease-in-out infinite alternate;
   @media min-768 {
@@ -152,7 +149,7 @@
   }
 }
 
-.wave-2_layer-2{
+.wave-2_layer-2 {
   animation: wave-2_anim-2 20s ease-in-out infinite alternate;
   @media min-768 {
     animation: wave-2_anim-2 40s ease-in-out infinite alternate;
@@ -166,10 +163,9 @@
   }
 }
 
-.wave-2_layer-3{
+.wave-2_layer-3 {
   animation: wave-2_anim-3 30s ease-in-out infinite alternate;
   @media min-768 {
     animation: wave-2_anim-3 60s ease-in-out infinite alternate;
   }
 }
-

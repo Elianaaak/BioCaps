@@ -12,24 +12,24 @@
 
 @mixin min-992 {
   @media (min-width: 992px) {
-    @content
+    @content;
   }
 }
 
 @mixin min-1200 {
   @media (min-width: 1200px) {
-    @content
+    @content;
   }
 }
 
 @mixin max-576 {
   @media (max-width: 576px) {
-    @content
+    @content;
   }
 }
 
 @mixin max-420 {
   @media (max-width: 420px) {
-    @content
+    @content;
   }
 }

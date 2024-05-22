@@ -592,7 +592,8 @@ html {
 .howto-3 {
   background-color: #DEEFC7;
   position: sticky;
-  z-index: 2002; }
+  z-index: 2002;
+  border-bottom: 2px solid #709646; }
   .howto-3 h4 {
     color: #494949; }
   .howto-3 p {
@@ -999,7 +1000,7 @@ html {
   height: auto; }
 
 .contact-info .contact-ubi {
-  height: 2.85rem; }
+  height: 2.5rem; }
 
 .contact-info .contact-subtitles {
   font-weight: bold; }
@@ -1023,9 +1024,6 @@ html {
   @media (max-width: 576px) {
     .contact-order2 {
       border-radius: 0; } }
-
-.contact-icons a img {
-  height: 2.5rem; }
 
 @keyframes popUp {
   0% {

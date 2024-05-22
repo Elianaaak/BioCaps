@@ -1,19 +1,18 @@
 .instagram {
-
-    .slick-arrow {
-        background-color: $white;
-        svg {
-            color: $black;
-        }
+  .slick-arrow {
+    background-color: $white;
+    svg {
+      color: $black;
     }
-    h4{
-        color: $black;
+  }
+  h4 {
+    color: $black;
+  }
+  .row {
+    background-color: $color-primary;
+    @include max-576 {
+      border-radius: 0;
     }
-    .row {
-        background-color: $color-primary;
-        @include max-576 {
-            border-radius: 0;
-        }
-        border-radius: 20px;
-    }
+    border-radius: 20px;
+  }
 }

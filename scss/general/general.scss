@@ -42,17 +42,17 @@
   height: auto;
   align-items: center;
   justify-content: center;
-  &:hover{
-    .circle-after{
+  &:hover {
+    .circle-after {
       width: 100%;
     }
     .icon.arrow::before {
-      transition: all 0.20s ease;
+      transition: all 0.2s ease;
       border-top: 0.125rem solid $color-secondary !important;
       border-right: 0.125rem solid $color-secondary !important;
     }
-    .button-text{
-      transition: all 0.20s ease;
+    .button-text {
+      transition: all 0.2s ease;
       color: $color-secondary;
     }
   }
@@ -182,7 +182,6 @@ html {
   }
   10% {
     opacity: 1;
-
   }
   90% {
     opacity: 1;
@@ -199,24 +198,22 @@ html {
   15% {
     width: 100%;
   }
-  40%{
+  40% {
     width: 75%;
   }
-  55%{
+  55% {
     width: 75%;
   }
-  65%{
+  65% {
     width: 40%;
   }
-  75%{
+  75% {
     width: 40%;
   }
   95% {
     width: 0%;
   }
 }
-
-
 
 .shop {
   position: fixed;
@@ -235,16 +232,16 @@ html {
   z-index: 12000;
   background-color: #fff;
   display: none;
-  animation: loading-shop 5s ease forwards ;
+  animation: loading-shop 5s ease forwards;
   opacity: 0;
   justify-content: center;
   align-items: center;
-  div{
+  div {
     display: flex;
     overflow: hidden;
     justify-content: end;
   }
-  img{
+  img {
     height: 6.5rem;
     width: auto;
   }
