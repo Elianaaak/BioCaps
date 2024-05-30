@@ -98,6 +98,10 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Last-Modified" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
   </head>
   <body class="overflow-x-hidden position-relative" id="body">
     <div
@@ -293,21 +297,21 @@
           id="navbarTogglerDemo02"
         >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#beneficios"
+            <li class="nav-item" onclick="toggleF()">
+              <a class="nav-link" aria-current="page" href="#beneficios-m"
                 >Beneficios</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#productos">Productos</a>
+            <li class="nav-item" onclick="toggleF()">
+              <a class="nav-link" href="#productos-m">Productos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#uso">Uso</a>
+            <li class="nav-item" onclick="toggleF()">
+              <a class="nav-link" href="#uso-m">Uso</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#faqs">FAQs</a>
+            <li class="nav-item" onclick="toggleF()">
+              <a class="nav-link" href="#faqs-m">FAQs</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" onclick="toggleF()">
               <a class="nav-link" href="#contacto">Contacto</a>
             </li>
           </ul>
@@ -340,13 +344,13 @@
             </span>
             <span class="circle-after position-absolute" aria-hidden="true">
             </span>
-            <span class="button-text" id="beneficios">shop</span>
+            <span class="button-text">shop</span>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="beneficios-m">
       <div
         class="row d-flex justify-content-between beneficios py-5 align-items-center"
       >
@@ -372,6 +376,7 @@
             src="./img/beneficios-icon2.png"
             alt="Eco-Friendly"
             class="mb-2"
+            id="beneficios"
           />
           <p class="text-center">Residuo <br />cero</p>
         </div>
@@ -383,9 +388,7 @@
           data-aos-offset="350"
         >
           <img src="./img/eco-icon.svg" alt="Ahorro de espacio" class="mb-2" />
-          <p class="text-center" id="productos">
-            Ingredientes <br />Biodegradables
-          </p>
+          <p class="text-center">Ingredientes <br />Biodegradables</p>
         </div>
         <div
           class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center"
@@ -410,16 +413,14 @@
             alt="Ahorro de espacio"
             class="mb-2"
           />
-          <p class="text-center" id="productos">
-            Optimización de <br />Espacio
-          </p>
+          <p class="text-center">Optimización de <br />Espacio</p>
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="productos-m">
       <div class="row py-5 pb-4 d-flex">
         <div class="col-12 mb-4">
-          <h2 class="text-center">Shop Online</h2>
+          <h2 class="text-center" id="productos">Shop Online</h2>
           <p class="text-center mb-0 products-subtitle" onclick="openShop()">
             Conocé nuestros productos
           </p>
@@ -850,7 +851,7 @@
           ></path>
         </svg>
       </div>
-      <div class="howto">
+      <div class="howto" id="uso-m">
         <div class="container">
           <div class="row use-1 use-first">
             <div
@@ -957,9 +958,7 @@
                   data-aos-delay="650"
                   data-aos-once="true"
                 >
-                  <p id="faqs">
-                    Una vez homogenizado, ¡Ya puede ser utilizado!
-                  </p>
+                  <p>Una vez homogenizado, ¡Ya puede ser utilizado!</p>
                 </div>
               </div>
             </div>
@@ -1005,7 +1004,7 @@
                 <h5>¿Qué hace únicas a BioCaps?</h5>
               </div>
               <div>
-                <p>
+                <p id="faqs">
                   Es un formato de limpieza práctico y efectivo, que por sobre
                   todo, no genera ningún tipo de residuo en el envase y usas el
                   100% del producto. Tecnología en limpieza, llevado a cabo con
@@ -1072,7 +1071,7 @@
       data-aos="fade-down"
       data-aos-duration="500"
       data-aos-offset="300"
-      data-aos-once="true"
+      id="faqs-m"
     >
       <div class="container">
         <h2 class="text-center">FAQs</h2>

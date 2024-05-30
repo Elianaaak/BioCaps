@@ -39,11 +39,11 @@
   .learn-more:hover .circle-after {
     width: 100%; }
   .learn-more:hover .icon.arrow::before {
-    transition: all 0.20s ease;
+    transition: all 0.2s ease;
     border-top: 0.125rem solid #709646 !important;
     border-right: 0.125rem solid #709646 !important; }
   .learn-more:hover .button-text {
-    transition: all 0.20s ease;
+    transition: all 0.2s ease;
     color: #709646; }
 
 .learn-more .circle {
@@ -136,7 +136,8 @@ p {
 
 /* Scroll snapping */
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  scroll-padding-top: 350px !important; }
 
 .pop-up {
   z-index: 9998;
@@ -590,7 +591,7 @@ html {
     color: #ffffff; }
 
 .howto-3 {
-  background-color: #DEEFC7;
+  background-color: #deefc7;
   position: sticky;
   z-index: 2002;
   border-bottom: 2px solid #709646; }
@@ -615,7 +616,7 @@ html {
 .use-step3 {
   background-color: #494949; }
   .use-step3 p {
-    color: #DEEFC7; }
+    color: #deefc7; }
 
 .use-1 {
   height: 90vh; }
@@ -744,7 +745,7 @@ html {
 
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5; }
-  .accordion .accordion-item button[aria-expanded='true'] {
+  .accordion .accordion-item button[aria-expanded="true"] {
     border-bottom: 1px solid #709646; }
 
 .accordion button {
@@ -780,7 +781,7 @@ html {
     .accordion button .icon::before {
       display: block;
       position: absolute;
-      content: '';
+      content: "";
       top: 9px;
       left: 5px;
       width: 10px;
@@ -789,18 +790,18 @@ html {
     .accordion button .icon::after {
       display: block;
       position: absolute;
-      content: '';
+      content: "";
       top: 5px;
       left: 9px;
       width: 2px;
       height: 10px;
       background: currentColor; }
 
-.accordion button[aria-expanded='true'] {
+.accordion button[aria-expanded="true"] {
   color: #709646; }
-  .accordion button[aria-expanded='true'] .icon::after {
+  .accordion button[aria-expanded="true"] .icon::after {
     width: 0; }
-  .accordion button[aria-expanded='true'] + .accordion-content {
+  .accordion button[aria-expanded="true"] + .accordion-content {
     opacity: 1;
     max-height: 20em;
     transition: all 200ms linear;
