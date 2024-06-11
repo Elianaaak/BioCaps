@@ -208,6 +208,7 @@
           <img src="./img/instagram.svg" alt="instagram" />
           <img src="./img/tiktok.svg" alt="tiktok" />
           <img src="./img/youtube-prenav.svg" alt="youtube" />
+          <img src="./img/linkedin-prenavbar.svg" alt="LinkedIn">
         </div>
       </div>
     </div>
@@ -246,12 +247,26 @@
                 <a class="nav-link" href="#contacto">Contacto</a>
               </li>
             </ul>
-            <img
-              src="./img/cart.svg"
-              alt="Tienda"
-              class="nav-cart me-3 ms-2"
-              onclick="openShop()"
-            />
+            <div class="position-relative d-flex justify-content-center cart-hover">
+              <img
+                src="./img/cart.svg"
+                alt="Tienda"
+                class="nav-cart me-3 ms-2"
+                onclick="openShop()"
+              />
+
+              <div class="cart-tag position-absolute">
+                <div class="position-relative d-flex flex-column align-items-center">
+                  <div class="triangle">
+
+                  </div>
+                  <div class="square d-flex justify-content-center align-items-center">
+                    <p class="m-2">Tienda</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -419,8 +434,8 @@
     </div>
     <div class="container-fluid" id="productos-m">
       <div class="row py-5 pb-4 d-flex">
-        <div class="col-12 mb-4">
-          <h2 class="text-center" id="productos">Shop Online</h2>
+        <div class="col-12 mb-4" data-aos="fade-down" data-aos-once="true">
+          <h2 class="text-center">Shop Online</h2>
           <p class="text-center mb-0 products-subtitle" onclick="openShop()">
             Conocé nuestros productos
           </p>
@@ -454,6 +469,7 @@
               data-aos="flip-left"
               data-aos-once="true"
               data-aos-offset="250"
+              id="productos"
               data-aos-duration="800"
             >
               <div class="position-relative">
@@ -580,7 +596,14 @@
                 </a>
               </div>
             </div>
-            <div class="slick">
+            <div 
+              class="slick"               
+              data-aos="flip-left"
+              data-aos-once="true"
+              data-aos-offset="250"
+              data-aos-delay="600"
+              data-aos-duration="800"
+            >
               <div class="position-relative">
                 <a href="/" class="d-flex justify-content-center">
                   <h4 class="product-title mt-1">
@@ -743,116 +766,22 @@
         </div>
       </div>
     </div>
-    <div id="uso">
+    <div class="container-fluid p-0">
       <div
         class="d-flex position-relative overflow-hidden"
         style="margin-bottom: -3px"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          class="position-absolute wave wave_layer-3"
-        >
-          <path
-            fill="#84bd3e"
-            fill-opacity="1"
-            d="M0,256L60,261.3C120,267,240,277,360,250.7C480,224,600,160,720,144C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          class="position-absolute wave-2 wave-2_layer-3"
-        >
-          <path
-            fill="#84bd3e"
-            fill-opacity="1"
-            d="M0,256L60,261.3C120,267,240,277,360,250.7C480,224,600,160,720,144C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-        <svg
-          id="wave"
-          style="transform: rotate(0deg); transition: 0.3s"
-          viewBox="0 0 1440 380"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          class="position-absolute wave wave_layer-2"
-        >
-          <defs>
-            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(201, 226, 187, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(201, 226, 187, 1)" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path
-            style="transform: translate(0, 0px); opacity: 1"
-            fill="url(#sw-gradient-0)"
-            d="M0,266L80,234.3C160,203,320,139,480,114C640,89,800,101,960,133C1120,165,1280,215,1440,209C1600,203,1760,139,1920,126.7C2080,114,2240,152,2400,183.7C2560,215,2720,241,2880,253.3C3040,266,3200,266,3360,253.3C3520,241,3680,215,3840,221.7C4000,228,4160,266,4320,253.3C4480,241,4640,177,4800,133C4960,89,5120,63,5280,76C5440,89,5600,139,5760,158.3C5920,177,6080,165,6240,152C6400,139,6560,127,6720,101.3C6880,76,7040,38,7200,63.3C7360,89,7520,177,7680,177.3C7840,177,8000,89,8160,57C8320,25,8480,51,8640,107.7C8800,165,8960,253,9120,240.7C9280,228,9440,114,9600,69.7C9760,25,9920,51,10080,95C10240,139,10400,203,10560,228C10720,253,10880,241,11040,253.3C11200,266,11360,304,11440,323L11520,342L11520,380L11440,380C11360,380,11200,380,11040,380C10880,380,10720,380,10560,380C10400,380,10240,380,10080,380C9920,380,9760,380,9600,380C9440,380,9280,380,9120,380C8960,380,8800,380,8640,380C8480,380,8320,380,8160,380C8000,380,7840,380,7680,380C7520,380,7360,380,7200,380C7040,380,6880,380,6720,380C6560,380,6400,380,6240,380C6080,380,5920,380,5760,380C5600,380,5440,380,5280,380C5120,380,4960,380,4800,380C4640,380,4480,380,4320,380C4160,380,4000,380,3840,380C3680,380,3520,380,3360,380C3200,380,3040,380,2880,380C2720,380,2560,380,2400,380C2240,380,2080,380,1920,380C1760,380,1600,380,1440,380C1280,380,1120,380,960,380C800,380,640,380,480,380C320,380,160,380,80,380L0,380Z"
-          ></path>
-        </svg>
-        <svg
-          id="wave"
-          style="transform: rotate(0deg); transition: 0.3s"
-          viewBox="0 0 1440 380"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          class="position-absolute wave-2 wave-2_layer-2"
-        >
-          <defs>
-            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(201, 226, 187, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(201, 226, 187, 1)" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path
-            style="transform: translate(0, 0px); opacity: 1"
-            fill="url(#sw-gradient-0)"
-            d="M0,266L80,234.3C160,203,320,139,480,114C640,89,800,101,960,133C1120,165,1280,215,1440,209C1600,203,1760,139,1920,126.7C2080,114,2240,152,2400,183.7C2560,215,2720,241,2880,253.3C3040,266,3200,266,3360,253.3C3520,241,3680,215,3840,221.7C4000,228,4160,266,4320,253.3C4480,241,4640,177,4800,133C4960,89,5120,63,5280,76C5440,89,5600,139,5760,158.3C5920,177,6080,165,6240,152C6400,139,6560,127,6720,101.3C6880,76,7040,38,7200,63.3C7360,89,7520,177,7680,177.3C7840,177,8000,89,8160,57C8320,25,8480,51,8640,107.7C8800,165,8960,253,9120,240.7C9280,228,9440,114,9600,69.7C9760,25,9920,51,10080,95C10240,139,10400,203,10560,228C10720,253,10880,241,11040,253.3C11200,266,11360,304,11440,323L11520,342L11520,380L11440,380C11360,380,11200,380,11040,380C10880,380,10720,380,10560,380C10400,380,10240,380,10080,380C9920,380,9760,380,9600,380C9440,380,9280,380,9120,380C8960,380,8800,380,8640,380C8480,380,8320,380,8160,380C8000,380,7840,380,7680,380C7520,380,7360,380,7200,380C7040,380,6880,380,6720,380C6560,380,6400,380,6240,380C6080,380,5920,380,5760,380C5600,380,5440,380,5280,380C5120,380,4960,380,4800,380C4640,380,4480,380,4320,380C4160,380,4000,380,3840,380C3680,380,3520,380,3360,380C3200,380,3040,380,2880,380C2720,380,2560,380,2400,380C2240,380,2080,380,1920,380C1760,380,1600,380,1440,380C1280,380,1120,380,960,380C800,380,640,380,480,380C320,380,160,380,80,380L0,380Z"
-          ></path>
-        </svg>
-        <svg
-          id="wave"
-          style="transform: rotate(0deg); transition: 0.3s"
-          viewBox="0 0 1440 300"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          class="wave"
-        >
-          <defs>
-            <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(112, 150, 70, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(112, 150, 70, 1)" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path
-            style="transform: translate(0, 100px); opacity: 1"
-            fill="url(#sw-gradient-2)"
-            d="M0,0L48,25C96,50,192,100,288,125C384,150,480,150,576,125C672,100,768,50,864,50C960,50,1056,100,1152,135C1248,170,1344,190,1440,185C1536,180,1632,150,1728,145C1824,140,1920,160,2016,175C2112,190,2208,200,2304,210C2400,220,2496,230,2592,235C2688,240,2784,240,2880,225C2976,210,3072,180,3168,155C3264,130,3360,110,3456,90C3552,70,3648,50,3744,75C3840,100,3936,170,4032,190C4128,210,4224,180,4320,155C4416,130,4512,110,4608,100C4704,90,4800,90,4896,110C4992,130,5088,170,5184,160C5280,150,5376,90,5472,75C5568,60,5664,90,5760,110C5856,130,5952,140,6048,125C6144,110,6240,70,6336,45C6432,20,6528,10,6624,40C6720,70,6816,140,6864,175L6912,210L6912,300L6864,300C6816,300,6720,300,6624,300C6528,300,6432,300,6336,300C6240,300,6144,300,6048,300C5952,300,5856,300,5760,300C5664,300,5568,300,5472,300C5376,300,5280,300,5184,300C5088,300,4992,300,4896,300C4800,300,4704,300,4608,300C4512,300,4416,300,4320,300C4224,300,4128,300,4032,300C3936,300,3840,300,3744,300C3648,300,3552,300,3456,300C3360,300,3264,300,3168,300C3072,300,2976,300,2880,300C2784,300,2688,300,2592,300C2496,300,2400,300,2304,300C2208,300,2112,300,2016,300C1920,300,1824,300,1728,300C1632,300,1536,300,1440,300C1344,300,1248,300,1152,300C1056,300,960,300,864,300C768,300,672,300,576,300C480,300,384,300,288,300C192,300,96,300,48,300L0,300Z"
-          ></path>
-        </svg>
-        <svg
-          id="wave"
-          style="transform: rotate(0deg); transition: 0.3s"
-          viewBox="0 0 1440 300"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          class="wave-2"
-        >
-          <defs>
-            <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(112, 150, 70, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(112, 150, 70, 1)" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path
-            style="transform: translate(0, 100px); opacity: 1"
-            fill="url(#sw-gradient-2)"
-            d="M0,0L48,25C96,50,192,100,288,125C384,150,480,150,576,125C672,100,768,50,864,50C960,50,1056,100,1152,135C1248,170,1344,190,1440,185C1536,180,1632,150,1728,145C1824,140,1920,160,2016,175C2112,190,2208,200,2304,210C2400,220,2496,230,2592,235C2688,240,2784,240,2880,225C2976,210,3072,180,3168,155C3264,130,3360,110,3456,90C3552,70,3648,50,3744,75C3840,100,3936,170,4032,190C4128,210,4224,180,4320,155C4416,130,4512,110,4608,100C4704,90,4800,90,4896,110C4992,130,5088,170,5184,160C5280,150,5376,90,5472,75C5568,60,5664,90,5760,110C5856,130,5952,140,6048,125C6144,110,6240,70,6336,45C6432,20,6528,10,6624,40C6720,70,6816,140,6864,175L6912,210L6912,300L6864,300C6816,300,6720,300,6624,300C6528,300,6432,300,6336,300C6240,300,6144,300,6048,300C5952,300,5856,300,5760,300C5664,300,5568,300,5472,300C5376,300,5280,300,5184,300C5088,300,4992,300,4896,300C4800,300,4704,300,4608,300C4512,300,4416,300,4320,300C4224,300,4128,300,4032,300C3936,300,3840,300,3744,300C3648,300,3552,300,3456,300C3360,300,3264,300,3168,300C3072,300,2976,300,2880,300C2784,300,2688,300,2592,300C2496,300,2400,300,2304,300C2208,300,2112,300,2016,300C1920,300,1824,300,1728,300C1632,300,1536,300,1440,300C1344,300,1248,300,1152,300C1056,300,960,300,864,300C768,300,672,300,576,300C480,300,384,300,288,300C192,300,96,300,48,300L0,300Z"
-          ></path>
-        </svg>
+
+      <img src="./img/wave-3.svg" class="position-absolute wave wave_layer-3">
+      <img src="./img/wave-3.svg" class="position-absolute wave-2 wave-2_layer-3">
+      <img src="./img/wave-2.svg" class="position-absolute wave wave_layer-2">
+      <img src="./img/wave-2.svg" class="position-absolute wave-2 wave-2_layer-2">
+      <img src="./img/wave-1.svg" class="wave">
+      <img src="./img/wave-1.svg" class="wave-2">
+      
       </div>
       <div class="howto" id="uso-m">
-        <div class="container">
+        <div class="container" id="uso">
           <div class="row use-1 use-first">
             <div
               class="col-lg-2 col-12 d-flex align-items-center align-items-lg-start justify-content-center"
@@ -1345,14 +1274,14 @@
             <div class="d-flex contact-info align-items-center mb-4 mb-xl-0">
               <div class="d-flex flex-column justify-content-center ms-xl-3">
                 <p class="my-0 contact-subtitles">Redes</p>
-                <div class="d-flex contact-icons ms-1">
+                <div class="d-flex contact-icons ms-1">                  
                   <a href=""
                     ><img
-                      src="./img/youtube-svgrepo-comf.svg"
+                      src="./img/instagram-svgrepo-cosss.svg"
+                      class="contact-ubi"
                       alt=""
                       srcset=""
-                      class="contact-ubi"
-                  /></a>
+                  /></a>                  
                   <a href=""
                     ><img
                       src="./img/tiktok-svgrepo-cossssm.svg"
@@ -1362,11 +1291,18 @@
                   /></a>
                   <a href=""
                     ><img
-                      src="./img/instagram-svgrepo-cosss.svg"
-                      class="contact-ubi"
+                      src="./img/youtube-svgrepo-comf.svg"
                       alt=""
                       srcset=""
+                      class="contact-ubi"
                   /></a>
+                  <a href=""
+                    ><img
+                      src="./img/linkedin-contact.svg"
+                      alt=""
+                      srcset=""
+                      class="contact-ubi"
+                 /></a>
                 </div>
               </div>
             </div>
